@@ -1,0 +1,72 @@
+@model GestionLocationWebApplication.Models.Entities.Reserver
+
+@{
+    ViewData["Title"] = "Details";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_Layout9";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Reserver</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Label)
+        </dt>
+        
+        
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Article.Label)
+        </dd>
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Description)
+        </dt>
+        
+                
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Article.Description)
+        </dd>
+
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Prix)
+        </dt>
+        
+
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Article.Prix)
+        </dd>
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Quantity)
+        </dt>
+        
+
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Article.Quantity)
+        </dd>
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Article.Categorie)
+        </dt>
+        
+
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Article.Categorie)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

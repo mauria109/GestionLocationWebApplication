@@ -1,0 +1,123 @@
+@model IEnumerable<GestionLocationWebApplication.Models.Entities.Location>
+
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_Layout5";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateLoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateRet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Retourner)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Client.Nom)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Client.Prenom)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Client.Tel)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Client.Ci)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.User.NomUsr)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.User.PrenomUsr)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.User.LoginUsr)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.User.DroitUsr)
+            </th>
+            
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateLoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Retourner)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Nom)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Prenom)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Tel)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.Ci)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.User.NomUsr)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.User.PrenomUsr)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.User.LoginUsr)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.User.DroitUsr)
+            </td>
+            
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

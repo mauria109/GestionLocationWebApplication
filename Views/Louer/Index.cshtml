@@ -1,0 +1,98 @@
+@model IEnumerable<GestionLocationWebApplication.Models.Entities.Louer>
+
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_Layout12";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.Location.Duree)</th>
+                        <th>@Html.DisplayNameFor(model => model.Location.Client)</th>
+                        <th>@Html.DisplayNameFor(model => model.Location.Retourner)</th>
+                        
+                        <th>@Html.DisplayNameFor(model => model.Location.User)</th>
+                        
+                        <th>@Html.DisplayNameFor(model => model.Location.DateLoc)</th>
+                        
+                        <th>@Html.DisplayNameFor(model => model.Location.DateRet)</th>
+                        
+                        <th>@Html.DisplayNameFor(model => model.Article.Label)</th>
+                        <th>@Html.DisplayNameFor(model => model.Article.Description)
+                        <th>@Html.DisplayNameFor(model => model.Article.Prix)</th>
+                        <th>@Html.DisplayNameFor(model => model.Article.Quantity)</th>
+                        <th>@Html.DisplayNameFor(model => model.Article.Categorie)</th>
+            
+                        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.Duree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.Client)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.Retourner)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.User)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.DateLoc)
+            </td>
+            
+                    
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.DateRet)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Article.Label)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Article.Description)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Article.Prix)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Article.Quantity)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Article.Categorie.Label)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

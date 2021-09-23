@@ -1,0 +1,50 @@
+@model GestionLocationWebApplication.Models.Entities.User
+
+@{
+    ViewData["Title"] = "Details";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_Layout1";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomUsr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomUsr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrenomUsr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrenomUsr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LoginUsr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LoginUsr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PwdUsr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PwdUsr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DroitUsr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DroitUsr)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdUsr">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

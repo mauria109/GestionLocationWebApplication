@@ -1,0 +1,88 @@
+@model GestionLocationWebApplication.Models.Entities.IncidentLocation
+
+@{
+    ViewData["Title"] = "Details";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_Layout7";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>IncidentLocation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeIncident)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeIncident)
+        </dd>
+        
+        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Location.Duree)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Location.Duree)
+                        </dd>
+                        
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Location.Client)
+                        </dt>
+                        
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Location.Client.Nom)
+                        </dd>
+                
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Location.Retourner)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Location.Retourner)
+                        </dd>
+                        
+                
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Location.User)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Location.User.NomUsr)
+                        </dd>
+                        
+                
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Location.DateLoc)
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Location.DateLoc)
+                        </dd>
+                        
+                        
+                        <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Location.DateRet)
+                        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Location.DateRet)
+        </dd>
+        
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Incident.Date)
+        </dt>
+        
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Incident.Date)
+        </dd>
+        
+        <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Achat.Date)
+                </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Achat.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

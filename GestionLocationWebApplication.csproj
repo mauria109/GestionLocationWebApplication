@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Models\Entities\Objet.cs" />
+      <Compile Remove="Models\Entities\MyListTable.cs" />
+      <Compile Remove="Models\DataEntities\**" />
+      <Compile Remove="Controllers\ProductController.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+      <PackageReference Include="MySql.Data" Version="8.0.26" />
+      <PackageReference Include="MySqlConnector" Version="1.4.0-beta.3" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
+      <PackageReference Include="System.Linq" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Models\DataEntities\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Models\DataEntities\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Models\DataEntities\**" />
+    </ItemGroup>
+
+</Project>
